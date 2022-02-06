@@ -58,11 +58,9 @@ def aprbs(**parms):
 
         # Update counters
         sample_count += tau_array[shift_count]
-        #print("Shift, Sample, tau, alpha: {}, {}, {}, {}".format(shift_count, sample_count, tau_array[shift_count], alpha_array[shift_count]))
         shift_count += 1
 
     tau_array[shift_count-1] -= (sample_count - n_samples)
-    #print(tau_array[shift_count-1])
 
     idx = 0
     for i in range(0,shift_count):
